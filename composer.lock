@@ -4,9 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7c315e4e703e4e5e746b630eea7c77ab",
-    "content-hash": "8fbf13abc5809fa6ed63d1f60614100a",
+    "hash": "c4a995358c37f64159211fc14386515a",
+    "content-hash": "cf8d55b09e85853eeff0dceefa3e9a45",
     "packages": [
+        {
+            "name": "commercie/currency",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Commercie/currency.git",
+                "reference": "61a060aa7bda895e6b12616969a3f8d5598028da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Commercie/currency/zipball/61a060aa7bda895e6b12616969a3f8d5598028da",
+                "reference": "61a060aa7bda895e6b12616969a3f8d5598028da",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "~5.5 || ~7.0"
+            },
+            "require-dev": {
+                "justinrainbow/json-schema": "~1.4",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "drupal/currency": "Integrates this package with Drupal."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Commercie\\Currency\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bart Feenstra",
+                    "email": "bart@mynameisbart.com",
+                    "homepage": "http://mynameisbart.com",
+                    "role": "Developer"
+                }
+            ],
+            "time": "2016-07-01 11:01:46"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -507,6 +552,52 @@
             "time": "2017-01-30 17:41:17"
         },
         {
+            "name": "mledoze/countries",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mledoze/countries.git",
+                "reference": "c212082894e48e8be123dad5dea7d9e6abc0c1b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/mledoze/countries/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/console": "^2.7|^3.0",
+                "symfony/yaml": "^2.7|^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MLD\\": "src/MLD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Open Database License"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammed Le Doze"
+                }
+            ],
+            "description": "World countries in JSON, CSV, XML and Yaml",
+            "homepage": "https://mledoze.github.io/countries/",
+            "keywords": [
+                "countries",
+                "csv",
+                "json",
+                "world",
+                "xml",
+                "yaml"
+            ],
+            "time": "2016-09-01 09:41:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.22.0",
             "source": {
@@ -781,6 +872,62 @@
             "time": "2016-11-07 23:38:38"
         },
         {
+            "name": "pragmarx/countries",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonioribeiro/countries.git",
+                "reference": "f190ff8132208dd22655ccb3bb5f9a2e31a3872e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonioribeiro/countries/zipball/f190ff8132208dd22655ccb3bb5f9a2e31a3872e",
+                "reference": "f190ff8132208dd22655ccb3bb5f9a2e31a3872e",
+                "shasum": ""
+            },
+            "require": {
+                "commercie/currency": "^1.0",
+                "laravel/framework": ">=5.3",
+                "mledoze/countries": "^1.8",
+                "php": ">=5.6.0",
+                "psr/simple-cache": "^1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PragmaRX\\Countries\\": "src/",
+                    "PragmaRX\\Countries\\Tests\\": "tests/",
+                    "PragmaRX\\Countries\\Tests\\PhpUnit\\": "tests/PhpUnit/"
+                },
+                "files": [
+                    "src/Support/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Carlos Ribeiro",
+                    "email": "acr@antoniocarlosribeiro.com",
+                    "role": "Creator"
+                }
+            ],
+            "description": "Laravel Countries and Currencies",
+            "keywords": [
+                "countries",
+                "currencies",
+                "laravel",
+                "pragmarx"
+            ],
+            "time": "2017-02-15 19:05:48"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -826,6 +973,54 @@
                 "psr-3"
             ],
             "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "753fa598e8f3b9966c886fe13f370baa45ef0e24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/753fa598e8f3b9966c886fe13f370baa45ef0e24",
+                "reference": "753fa598e8f3b9966c886fe13f370baa45ef0e24",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-01-02 13:31:39"
         },
         {
             "name": "psy/psysh",
@@ -1764,6 +1959,61 @@
             "time": "2017-01-03 08:53:57"
         },
         {
+            "name": "symfony/yaml",
+            "version": "v3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "50eadbd7926e31842893c957eca362b21592a97d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/50eadbd7926e31842893c957eca362b21592a97d",
+                "reference": "50eadbd7926e31842893c957eca362b21592a97d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "symfony/console": "~2.8|~3.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-01-03 13:51:32"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.0",
             "source": {
@@ -1862,6 +2112,121 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "barryvdh/laravel-ide-helper",
+            "version": "v2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-ide-helper.git",
+                "reference": "a7fc2ec489aada6062d3a63ddc915004a21e38af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/a7fc2ec489aada6062d3a63ddc915004a21e38af",
+                "reference": "a7fc2ec489aada6062d3a63ddc915004a21e38af",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/reflection-docblock": "^2.0.4",
+                "illuminate/console": "^5.0,<5.5",
+                "illuminate/filesystem": "^5.0,<5.5",
+                "illuminate/support": "^5.0,<5.5",
+                "php": ">=5.4.0",
+                "symfony/class-loader": "^2.3|^3.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "~2.3",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "suggest": {
+                "doctrine/dbal": "Load information from the database about models for phpdocs (~2.3)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\LaravelIdeHelper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.",
+            "keywords": [
+                "autocomplete",
+                "codeintel",
+                "helper",
+                "ide",
+                "laravel",
+                "netbeans",
+                "phpdoc",
+                "phpstorm",
+                "sublime"
+            ],
+            "time": "2017-01-05 21:20:42"
+        },
+        {
+            "name": "barryvdh/reflection-docblock",
+            "version": "v2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/ReflectionDocBlock.git",
+                "reference": "3dcbd98b5d9384a5357266efba8fd29884458e5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/ReflectionDocBlock/zipball/3dcbd98b5d9384a5357266efba8fd29884458e5c",
+                "reference": "3dcbd98b5d9384a5357266efba8fd29884458e5c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0,<4.5"
+            },
+            "suggest": {
+                "dflydev/markdown": "~1.0",
+                "erusev/parsedown": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Barryvdh": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "mike.vanriel@naenius.com"
+                }
+            ],
+            "time": "2016-06-13 19:28:20"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
@@ -3224,27 +3589,28 @@
             "time": "2016-10-03 07:35:21"
         },
         {
-            "name": "symfony/yaml",
+            "name": "symfony/class-loader",
             "version": "v3.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "50eadbd7926e31842893c957eca362b21592a97d"
+                "url": "https://github.com/symfony/class-loader.git",
+                "reference": "0152f7a47acd564ca62c652975c2b32ac6d613a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/50eadbd7926e31842893c957eca362b21592a97d",
-                "reference": "50eadbd7926e31842893c957eca362b21592a97d",
+                "url": "https://api.github.com/repos/symfony/class-loader/zipball/0152f7a47acd564ca62c652975c2b32ac6d613a6",
+                "reference": "0152f7a47acd564ca62c652975c2b32ac6d613a6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "symfony/console": "~2.8|~3.0"
+                "symfony/finder": "~2.8|~3.0",
+                "symfony/polyfill-apcu": "~1.1"
             },
             "suggest": {
-                "symfony/console": "For validating YAML files using the lint command"
+                "symfony/polyfill-apcu": "For using ApcClassLoader on HHVM"
             },
             "type": "library",
             "extra": {
@@ -3254,7 +3620,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
+                    "Symfony\\Component\\ClassLoader\\": ""
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
@@ -3274,9 +3640,9 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony Yaml Component",
+            "description": "Symfony ClassLoader Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-03 13:51:32"
+            "time": "2017-01-10 14:14:38"
         },
         {
             "name": "webmozart/assert",

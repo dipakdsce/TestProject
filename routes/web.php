@@ -19,3 +19,10 @@ Route::group(['prefix' => 'testproject'], function () {
     Route::get('/' , 'TestProjectController@index');
     Route::get('/login' , 'TestProjectController@login');
 });
+
+Route::group(['prefix' => 'urlshorter'], function () {
+    Route::get('/' , 'UrlShorterController@index');
+    ROute::post('/login', 'UrlShorterController@login');
+    Route::post('/short' , 'UrlShorterController@shortUrl');
+});
+

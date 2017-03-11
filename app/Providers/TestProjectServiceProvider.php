@@ -28,7 +28,7 @@ class TestProjectServiceProvider extends ServiceProvider
 
     public function registerService()
     {
-        $this->app->singleton('testproject', 'Services\TestProjectService');
+        $this->app->singleton('testproject', 'App\Services\TestProjectService');
     }
 
 

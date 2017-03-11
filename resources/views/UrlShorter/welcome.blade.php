@@ -21,7 +21,7 @@
             <a class="hiddenanchor" id="tologin"></a>
             <div id="wrapper">
                 <div id="login" class="animate form">
-                    <form  action="testproject/login" autocomplete="on">
+                    <form  action="" autocomplete="on">
                         <h1>Log in</h1>
                         <p>
                             <label for="username" class="uname" data-icon="u" > Your email or username </label>
@@ -46,28 +46,30 @@
                 </div>
 
                 <div id="register" class="animate form">
-                    <form  action="/testproject/login" autocomplete="on" onsubmit="setCookie()">
+                    <form  action="urlshorter/login" autocomplete="on" onsubmit="submitForm()" method="post">
                         <h1> Sign up </h1>
+                        {!! csrf_field() !!}
+
                         <p>
                             <label for="firstnamesignup" class="fname" data-icon="u">First Name</label>
                             <input id="firstnamesignup" name="firstNameSignUp" required="required" type="text" placeholder="John" />
                         </p>
                         <p>
                             <label for="middlenamesignup" class="mname" data-icon="u">Middle Name</label>
-                            <input id="middlenamesignup" name="middleNameSignUp" required="required" type="text" placeholder="L" />
+                            <input id="middlenamesignup" name="middleNameSignUp"  type="text" placeholder="L" />
                         </p>
                         <p>
                             <label for="lastnamesignup" class="lname" data-icon="u">Last Name</label>
                             <input id="lastnamesignup" name="lastNameSignUp" required="required" type="text" placeholder="Smith" />
                         </p>
-                        <p>
-                            <label for="addresssignup" class="address" data-icon="u">Mailing Address</label>
-                            <input id="addresssignup" name="addressSignUp" required="required" type="text" placeholder="27th Street UK" />
-                        </p>
-                        <p>
+                        {{--<p>--}}
+                            {{--<label for="addresssignup" class="address" data-icon="u">Mailing Address</label>--}}
+                            {{--<input id="addresssignup" name="addressSignUp" required="required" type="text" placeholder="27th Street UK" />--}}
+                        {{--</p>--}}
+                        {{--<p>
                             <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
                             <input id="usernamesignup" name="userNameSignUp" required="required" type="text" placeholder="mysuperusername690" />
-                        </p>
+                        </p>--}}
                         <p>
                             <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
                             <input id="emailsignup" name="emailSignUp" required="required" type="email" placeholder="mysupermail@mail.com"/>
@@ -81,7 +83,8 @@
                             <input id="passwordsignup_confirm" name="passwordSignUpConfirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                         </p>
                         <p class="signin button">
-                            <input type="submit" value="Sign up"/>
+                            {{--<input type="submit" onsubmit="return submit();" value="Sign up"/>--}}
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         </p>
                         <p class="change_link">
                             Already a member ?
@@ -95,8 +98,18 @@
     </section>
 </div>
 <script type="text/javascript">
-    function setCookie() {
-        document.cookie = "name=dipak;";
+    function submitForm() {
+
+        var pwd = document.getElementById("passwordsignup");
+        var cnfpwd = document.getElementById("passwordsignup_confirm");
+        windows.console.log("pwd:" + pwd);
+        windows.console.log("cnfpwd:" + cnfpwd);
+        if(pwd != cnfpwd)
+        {
+            alert('password does not match');
+            return;
+        }
+
     }
 </script>
 </body>

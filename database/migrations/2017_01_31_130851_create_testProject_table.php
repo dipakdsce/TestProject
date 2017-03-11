@@ -14,7 +14,7 @@ class CreateTestProjectTable extends Migration
     public function up()
     {
         Schema::create('testProject', function (Blueprint $table) {
-            $table->increament('id');
+            $table->increments('id');
             $table->string('user_name');
             $table->string('first_name');
             $table->string('middle_name');

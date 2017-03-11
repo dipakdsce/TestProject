@@ -176,7 +176,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\TestProjectServiceProvider::class
+        App\Providers\TestProjectServiceProvider::class,
+        /**
+         *  Countries package
+         */
+        PragmaRX\Countries\ServiceProvider::class
 
 
     ],
@@ -227,7 +231,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'TestProject' => App\Facades\TestProjectFacade::class
+        'TestProject' => App\Facades\TestProjectFacade::class,
+        'Countries'=> PragmaRX\Countries\Facade::class
     ],
 
 ];
