@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Request;
+use Facades\App\Services\UrlShorterService;
 
 class UrlShorterController extends Controller
 {
@@ -11,7 +12,13 @@ class UrlShorterController extends Controller
         return view('UrlShorter.welcome');
     }
 
-    public function login(Request $request)
+    public function signUp()
+    {
+        $params = Request::all();
+        return UrlShorterService::signUp($params);
+    }
+
+    public function login()
     {
 
         $params = Request::all();

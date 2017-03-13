@@ -22,7 +22,8 @@ Route::group(['prefix' => 'testproject'], function () {
 
 Route::group(['prefix' => 'urlshorter'], function () {
     Route::get('/' , 'UrlShorterController@index');
-    ROute::post('/login', 'UrlShorterController@login');
+    Route::post('/login', 'UrlShorterController@login');
+    Route::post('/signup', 'UrlShorterController@signUp');
     Route::post('/short' , 'UrlShorterController@shortUrl');
 });
 

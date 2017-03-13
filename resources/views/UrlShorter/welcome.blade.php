@@ -46,10 +46,9 @@
                 </div>
 
                 <div id="register" class="animate form">
-                    <form  action="urlshorter/login" autocomplete="on" onsubmit="submitForm()" method="post">
+                    <form  action="urlshorter/signup" autocomplete="on" onsubmit="submitForm()" method="post">
+                        {{ csrf_field() }}
                         <h1> Sign up </h1>
-                        {!! csrf_field() !!}
-
                         <p>
                             <label for="firstnamesignup" class="fname" data-icon="u">First Name</label>
                             <input id="firstnamesignup" name="firstNameSignUp" required="required" type="text" placeholder="John" />
@@ -83,8 +82,8 @@
                             <input id="passwordsignup_confirm" name="passwordSignUpConfirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                         </p>
                         <p class="signin button">
-                            {{--<input type="submit" onsubmit="return submit();" value="Sign up"/>--}}
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="submit" onsubmit="return submit();" value="Sign up"/>
+                            {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
                         </p>
                         <p class="change_link">
                             Already a member ?

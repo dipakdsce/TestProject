@@ -232,7 +232,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'TestProject' => App\Facades\TestProjectFacade::class,
-        'Countries'=> PragmaRX\Countries\Facade::class
+        'Countries'=> PragmaRX\Countries\Facade::class,
+        'UrlShorter' => App\Facades\UrlShorterFacade::class
     ],
 
 ];
